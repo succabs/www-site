@@ -9,20 +9,15 @@ import { SITE_TITLE } from '../consts';
 		<div class="internal-links">
 			<p>MENU</p>
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-			<HeaderLink href="/about">Projects</HeaderLink>
+			<HeaderLink href="/about">About me</HeaderLink>
+			<HeaderLink href="/projects">Projects</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 
 		</div>
 
 		<div class="internal-links">
-			<p>CONTACT & LINKS</p>
-			<HeaderLink href="/">artnikkila@gmail.com</HeaderLink>
-			<HeaderLink href="/about">GitHub</HeaderLink>
-			<HeaderLink href="/about">LinkedIn</HeaderLink>
-
-		</div>
-
+			<p>EMAIL & LINKS</p>
+			<p><a href="mailto:artnikkila@gmail.com">artnikkila@gmail.com</a></p>
 		<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
 				<span class="sr-only">Follow Astro on Mastodon</span>
@@ -67,6 +62,7 @@ import { SITE_TITLE } from '../consts';
 		justify-content: center;
 		text-align: right;
 		top: 0px;
+		z-index: 1; /* Set a higher z-index for the body border */
 	}
 
 	h2 {
