@@ -1,4 +1,4 @@
-name: Deploy Astro to VPS
+name: Deploy Astro project to VPS
 on:
   push:
     branches: [ master ]
@@ -15,7 +15,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd ~/Projects/www-site
-          git pull origin main
+          git pull origin master
           export NVM_DIR=~/.nvm
           source ~/.nvm/nvm.sh    
           npm install --only=prod
