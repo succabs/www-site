@@ -7,17 +7,16 @@ import { SITE_TITLE } from '../consts';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<p>MENU</p>
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/about">About me</HeaderLink>
-			<HeaderLink href="/projects">Projects</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-
-		</div>
+			<h6 class="menu-heading">MENU</h6>
+			<div class="link-wrapper"><HeaderLink href="/">Home</HeaderLink></div>
+			<div class="link-wrapper"><HeaderLink href="/about">About me</HeaderLink></div>
+			<div class="link-wrapper"><HeaderLink href="/projects">Projects</HeaderLink></div>
+			<div class="link-wrapper"><HeaderLink href="/blog">Blog</HeaderLink></div>
+		  </div>
 
 		<div class="internal-links">
-			<p>EMAIL & LINKS</p>
-			<p><a href="mailto:artnikkila@gmail.com">artnikkila@gmail.com</a></p>
+			<h6 class="menu-heading">EMAIL & LINKS</h6>
+			<a href="mailto:artnikkila@gmail.com">artnikkila@gmail.com</a>
 		<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
 				<span class="sr-only">Follow Astro on Mastodon</span>
@@ -52,22 +51,36 @@ import { SITE_TITLE } from '../consts';
 <style>
 	header {
 		border-right-style: solid;
-		border-image: radial-gradient(#8c8ce6, #b180c0) 1;
+		border-image: linear-gradient(#3489eb, #3489eb) 1;
 		position: fixed;
-		height: 100%;
+		height: calc(100% - 20px);
 		padding-right: 2rem;
 		padding-left: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		text-align: right;
-		top: 0px;
+		top: 10px;
 		z-index: 1; /* Set a higher z-index for the body border */
+	}
+
+	h6{
+		margin-bottom: 0.5rem;
+		margin-top: 0rem;
 	}
 
 	h2 {
 		margin: 0;
 		font-size: 1em;
+	}
+	.menu-heading:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 2rem;
+		border-bottom: 1px solid black;
+		height: 2px;
+		width: 2em;
 	}
 
 	h2 a,
@@ -78,16 +91,31 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 1.5rem;
 	}
+
+	.link-wrapper {
+  display: inline-block;
+}
+
+.social-links {
+	margin-top: 1rem;
+}
+
 
 	nav a {
 		color: var(--black);
-		border-bottom: 1px solid transparent;
 		text-decoration: none;
+		border-bottom: 1px solid transparent;
 	}
+	nav a:hover {
+		color: var(--black);
+		border-bottom: 1px solid var(--accent);
+	}
+
 	nav a.active {
 		text-decoration: none;
-		border-bottom-color: var(--accent);
+		border-bottom: 1px solid var(--accent-dark);
 	}
 	.social-links,
 	.social-links a {
@@ -109,6 +137,15 @@ import { SITE_TITLE } from '../consts';
 	.social-links a {
 		display: flex;
 		justify-content: center;
+	}
+
+	.menu-heading:after {
+		content: "";
+		display: block;
+		text-align: center;
+		border-bottom: 1px solid black;
+		height: 2px;
+		width: 2em;
 	}
 
 	}

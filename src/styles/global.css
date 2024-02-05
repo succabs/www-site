@@ -43,12 +43,10 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: radial-gradient(#e66465, #9198e5);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+
   color: rgb(var(--gray-dark));
   font-size: 20px;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 h1,
@@ -159,7 +157,7 @@ main {
   margin: auto;
   padding-left: 22px;
   padding-right: 30px;
-  margin-left: 15rem;
+  margin-left: 14.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -169,11 +167,10 @@ main {
 .wrapper {
   overflow: scroll;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
   background: #fcfcfc;
   border-width: 10px;
   border-style: solid;
-  border-image: radial-gradient(#e66465, #9198e5) 1;
+  border-image: radial-gradient(#85e5ff, #3489eb) 1;
   position: relative; /* Create a stacking context */
   z-index: 2; /* Set a higher z-index for the wrapper */
 }

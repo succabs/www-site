@@ -2,29 +2,39 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from 'astro:assets';
 import profileImage from '../images/profile_pic.jpg';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+  const latestPosts = posts.slice(0, 3); // Get the latest 3 posts
 ---
 
 <BaseLayout>
 	<div class="greetings-container">
 		<div class="textplusphoto">
-            <h1>GREETINGS!</h1>
+            <h1>Heya.</h1>
 			<Image class="profile-image" src={profileImage} alt="Picture of me."/>
           </div>
 
 	<p>Welcome to my website.
 	</p>
 	<p>
-		I am Arttu, a 27 years old developer from Jyväskylä.
-	</p>
-	<p>I am currently employed as a junior developer in an eCommerce agency doing all kind of things related to front-end development and Shopify.</p>
+		I am Arttu, a 27 years old developer from Jyväskylä, Finland - currently employed as a junior developer in an eCommerce agency doing all kind of things related to front-end development and Shopify.
+  </p>
 	<p>
-		This site works as my personal website, portfolio and a blog.
-		Feel free to look around and remember to have fun!
-	</p>
-	<h2>Latest posts</h2>
-	<p>
-		Post 1
-	</p>
+		This site works as my personal website, portfolio and blog. Built with Astro, deployed on Hetzner Cloud VPS with Github Actions.
+  </p>
+  <p>
+   If you are interested in looking under the hood, the source code is available on a GitHub repository.
+		Feel free to look around and have fun!
+  </p>
+
+  <div>
+    
+
+        <a class="" href="/blog" title="All Posts">All Posts &rarr;</a>
+    </div>  
+
 
 </div>
 </BaseLayout>
@@ -42,7 +52,7 @@ import profileImage from '../images/profile_pic.jpg';
   max-width: 200px;
   max-height: 200px;
   border-radius: 50%;
-  margin-bottom: 2rem;
+  margin-right:5rem;
 }
 
 @media (max-width: 720px) {

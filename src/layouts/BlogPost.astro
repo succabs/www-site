@@ -13,9 +13,8 @@ import BaseLayout from "./BaseLayout.astro";
 <BaseLayout>
 		<style>
 			article {
-				width: calc(100% - 5em);
 				max-width: 100%;
-				margin: 0;
+				margin: 0 auto;
 			}
 			.hero-image {
 				width: 100%;
@@ -27,10 +26,8 @@ import BaseLayout from "./BaseLayout.astro";
 				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 5em);
-				margin: auto;
-				padding: 1em;
+				margin: 0 auto;
+				padding: 0;
 				color: rgb(var(--gray-dark));
 			}
 			.title {
