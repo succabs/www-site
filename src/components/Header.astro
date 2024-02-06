@@ -2,11 +2,16 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { Icon } from 'astro-icon/components';
+import Hamburger from "./Hamburger.astro";
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="mobile-menu">
+			<Hamburger />
+			<h2><a href="/">{SITE_TITLE}</a></h2>
+		</div>
+		<div class="menu-items">
 		<div class="internal-links">
 			<h6 class="menu-heading">MENU</h6>
 			<div class="link-wrapper"><HeaderLink href="/">Home</HeaderLink></div>
@@ -32,6 +37,8 @@ import { Icon } from 'astro-icon/components';
 				<Icon name="tabler:brand-github" />
 			</a>
 		</div>
+	</div>
+</div>
 	</nav>
 </header>
 <style>
@@ -118,7 +125,7 @@ import { Icon } from 'astro-icon/components';
     position: relative;
     width: 100%;
     border: 0px;
-    padding-bottom: 2rem;
+    padding: 0;
     border-bottom: 1px solid black;
     text-align: center;
     height: auto;
@@ -130,13 +137,23 @@ import { Icon } from 'astro-icon/components';
 		justify-content: center;
 	}
 
+
 	.menu-heading:after {
 		content: "";
 		display: block;
 		text-align: center;
+		position: absolute;
+		right:46.5%;
 		border-bottom: 1px solid black;
 		height: 2px;
-		width: 2em;
+		width: 3em;
+	}
+
+	.mobile-menu{
+		display:flex;
+		align-items: center;
+		width: 100%;
+		padding-left: 1rem;
 	}
 
 	}
