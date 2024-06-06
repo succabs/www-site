@@ -21,20 +21,20 @@ import Hamburger from "./Hamburger.astro";
 		  </div>
 
 		<div class="internal-links">
-			<h6 class="menu-heading">EMAIL & LINKS</h6>
+			<h6 class="menu-heading">EMAIL & SOCIALS</h6>
 			<a href="mailto:artnikkila@gmail.com">artnikkila@gmail.com</a>
 		<div class="social-links">
-			<a href="https://exercism.org/profiles/succabs" target="_blank">
-				<span class="sr-only">Link to my Exercism</span>
-				<Icon name="tabler:code-circle" />
+			<a href="https://www.duolingo.com/profile/ArttuNi" target="_blank">
+				<span class="sr-only">Link to my Duolingo</span>
+				<Icon name="duolingo" />
 			</a>
 			<a href="https://linkedin.com/in/arttu-nikkila" target="_blank">
 				<span class="sr-only">Link to my Linkedin</span>
-				<Icon name="tabler:brand-linkedin" />
+				<Icon name="linkedin" />
 			</a>
 			<a href="https://github.com/succabs" target="_blank">
 				<span class="sr-only">Link to my GitHub repo</span>
-				<Icon name="tabler:brand-github" />
+				<Icon name="fa:github-square" />
 			</a>
 		</div>
 	</div>
@@ -97,7 +97,11 @@ import Hamburger from "./Hamburger.astro";
 }
 
 .social-links {
-	margin-top: 1rem;
+	margin: 1rem 0;
+}
+
+.social-links a {
+	margin: 0 4px;
 }
 
 

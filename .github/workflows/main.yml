@@ -20,4 +20,4 @@ jobs:
           source ~/.nvm/nvm.sh    
           npm install
           npm run build --if-present
-          cp -r ~/Projects/www-site/dist/* /var/www/arttu.pro/html/
+          cp -r ~/Projects/www-site/dist/* /var/www/arttu.net/html/
