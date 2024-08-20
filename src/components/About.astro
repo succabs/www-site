@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import myImage from '../media/me.jpg';
+import { Icon } from 'astro-icon/components';
+---
+
+<section class='text-body pt-16 pb-8'>
+  <div
+    class='container mx-auto flex flex-col-reverse md:flex-row items-center px-2'
+  >
+    <!-- Left Section: Greeting, Subheading, Text, Social Icons, Buttons -->
+    <div class='md:w-1/2 text-center md:text-left space-y-6'>
+      <h1 class='text-5xl font-bold'>
+        <span class='text-secondary'>Hi</span>, my name is <span
+          class='text-primary'>Arttu Nikkilä</span
+        >
+      </h1>
+      <h2 class='text-2xl font-semibold text-heading'>I am a Web Developer</h2>
+      <p class='text-lg text-body'>
+        I specialize in building dynamic, high-performance websites using modern
+        web technologies.
+      </p>
+
+      <!-- Social Icons -->
+      <div class='flex justify-center md:justify-start space-x-6'>
+        <a href='https://github.com' target='_blank' class='text-4xl'
+          ><Icon class='fab fa-2x' name='skill-icons:github-dark' /></a
+        >
+        <a href='https://linkedin.com' target='_blank' class='text-4xl'
+          ><Icon class='fab fa-2x' name='skill-icons:linkedin' /></a
+        >
+      </div>
+    </div>
+    <!-- Right Section: Image/Illustration -->
+    <div class='md:w-1/2 flex justify-center md:justify-end pb-6'>
+      <Image src={myImage} alt='Picture of me' class='w-64 h-64 rounded-full' />
+    </div>
+  </div>
+</section>

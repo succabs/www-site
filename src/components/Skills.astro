@@ -1,0 +1,53 @@
+---
+import { Icon } from 'astro-icon/components'; // Or any other icon library
+
+const skillCategories = [
+  {
+    category: 'Languages',
+    skills: [
+      { name: 'JavaScript', icon: 'tabler:brand-javascript' },
+      { name: 'TypeScript', icon: 'tabler:brand-typescript' },
+      { name: 'Python', icon: 'tabler:brand-python' },
+    ],
+  },
+  {
+    category: 'Frameworks',
+    skills: [
+      { name: 'React', icon: 'tabler:brand-react' },
+      { name: 'Next.js', icon: 'tabler:brand-nextjs' },
+      { name: 'Node.js', icon: 'tabler:brand-nodejs' },
+    ],
+  },
+  {
+    category: 'Tools',
+    skills: [
+      { name: 'Git', icon: 'tabler:brand-git' },
+      { name: 'Docker', icon: 'tabler:brand-docker' },
+      { name: 'Visual Studio Code', icon: 'tabler:brand-visual-studio' },
+    ],
+  },
+];
+---
+
+<section class='py-12'>
+  <div class='container mx-auto px-4'>
+    <h2 class='text-3xl font-bold text-center mb-8'>My Skills</h2>
+
+    <!-- Loop through each category -->
+    {
+      skillCategories.map((category) => (
+        <div class='mb-12'>
+          <h3 class='text-2xl font-semibold mb-4'>{category.category}</h3>
+          <div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6'>
+            {category.skills.map((skill) => (
+              <div class='flex flex-col items-center text-center bg-white p-4 rounded-lg shadow'>
+                <Icon name={skill.icon} class='text-4xl mb-2 text-gray-700' />
+                <span class='text-sm font-medium'>{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

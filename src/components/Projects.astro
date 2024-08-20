@@ -1,0 +1,64 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+
+// Import images statically
+import kandiRushImg from '../media/1.jpg';
+import consentAnalyserImg from '../media/2.jpg';
+import jyvascapeImg from '../media/3.jpg';
+const projects = [
+  {
+    name: 'Consent Analyser',
+    description:
+      "Chrome Extension to check if CMP is connected to Shopify's Customer Privacy API and to see dataLayer pushes. No tool + code available publicly - email me to get a demo :)",
+    techStack: ['Javascript', 'HTML', 'CSS'],
+    liveLink: '', // No live link available, buttons disabled
+    codeLink: '',
+    image: consentAnalyserImg, // Statically imported image
+    isDisabled: true,
+  },
+  {
+    name: 'Kandi Rush Saga',
+    description:
+      'A very serious game in which you have to get 180 student credits to graduate before running out of allowance months. Beware of Plagiointisyytös and Moodlen käyttökatko.',
+    techStack: ['Javascript', 'Phaser'],
+    liveLink: 'https://live-link-kandi-rush.com',
+    codeLink: 'https://github.com/username/kandi-rush-saga',
+    image: kandiRushImg, // Statically imported image
+    isDisabled: false,
+  },
+
+  {
+    name: 'Jyväscape',
+    description:
+      'City exploration webapp. Frontend with React + Mantine for UI, backend with ExpressJS, database with PostqreSQL.',
+    techStack: ['React', 'Mantine', 'ExpressJS', 'PostqreSQL'],
+    liveLink: 'https://jyvascape.com',
+    codeLink: 'https://github.com/username/jyvascape',
+    image: jyvascapeImg, // Statically imported image
+    isDisabled: false,
+  },
+];
+---
+
+<section class='py-12'>
+  <div class='container mx-auto px-4'>
+    <h2 class='text-3xl font-bold text-center mb-8'>Selected Projects</h2>
+
+    <!-- Project Cards Grid -->
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      {
+        projects.map((project) => (
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            techStack={project.techStack}
+            liveLink={project.liveLink}
+            codeLink={project.codeLink}
+            image={project.image}
+            isDisabled={project.isDisabled}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
