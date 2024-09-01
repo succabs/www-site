@@ -3,17 +3,24 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const tags = posts.map((p) => p.data.tags).flat();
+const uniqueTags = [...new Set(tags)];
+
 import BaseLayout from "../../layouts/Layout.astro";
+
 ---
 
 <BaseLayout title="Arttu Nikkilä - Blog">
   <section class="container mx-auto px-4 wrapper pt-12 pb-8">
+    <h1 class="text-3xl font-bold text-center mb-8">Blog</h1>
+    <p class="text-body mb-8">From this blog you can find out my thoughts and experiences about variety of things.</p>
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
       {
         posts.map((post, index) => (
-          <li class={`${index === 0 ? 'md:col-span-2' : ''}`}>
+          <li class={`${index === 0 ? 'md:col-span-2' : ''} ${post.data.tags.join(" ")}`}>
             <a href={`/blog/${post.slug}/`} class="block transition-transform hover:scale-105">
               <img 
                 width={720} 
@@ -28,6 +35,13 @@ import BaseLayout from "../../layouts/Layout.astro";
               <p class="text-gray-500">
                 <FormattedDate date={post.data.pubDate} />
               </p>
+              <div class="flex flex-wrap gap-2 mt-2">
+                {post.data.tags.map(tag => (
+                  <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </a>
           </li>
         ))

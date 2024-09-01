@@ -1,13 +1,13 @@
 ---
-title: '400 Days of Learning Norwegian on Duolingo'
-description: 'After 400 days of dedicated practice on Duolingo, I’ve not only learned the basics of Norwegian but also gained insights into the challenges and rewards of long-term language learning. In this post, I share my journey, the ups and downs, and my plans for continuing this linguistic adventure.'
+title: '365 Days of Learning Norwegian on Duolingo'
+description: 'After a year of dedicated practice on Duolingo, I’ve not only learned some of the basics of Norwegian but also gained insights into the challenges and rewards of long-term language learning. In this post, I share my journey, the ups and downs, and my plans for continuing this linguistic adventure.'
 pubDate: 'Aug 29 2024'
-heroImage: '/1.jpg'
+heroImage: '/norway.jpg'
 author: 'Arttu Nikkilä'
 tags: ["learning", "languages", "lifestyle"]
 ---
 
-This is the story of my great achievement: I finally hit the 400-day mark on Duolingo! Read on to discover what I’ve learned during this time and how this journey has shaped my perspective.
+This is the story of an achievement I have quietly done over the year: I finally hit the 365-day streak on Duolingo! Read on to discover what I’ve learned during this time and how this journey has shaped my perspective.
 
 ## Why Norwegian?
 
@@ -26,12 +26,12 @@ My journey with Norwegian started with a realization: the basics of the language
 
 Consistency was key. I committed to practicing 5-10 minutes daily, usually squeezing in a session before brushing my teeth and going to bed. Additionally, I supplemented my Duolingo exercises with podcasts about learning Norwegian and life in Norway, which provided valuable context and kept me motivated.
 
-### Milestones and Challenges
+### Challenges
 
-Reaching 400 days wasn’t without its hurdles:
+Reaching 365 days wasn’t without its hurdles:
 
 - **Maintaining the Streak**: There were days when I struggled to find the time to continue my streak, but fortunately, Duolingo offers streak freezes, which were a lifesaver on more than one occasion.
-- **The Numbers Dilemma**: One of the most frustrating aspects was Duolingo's difficulty with spoken numbers. Exercises involving numbers often felt cumbersome and less effective.
+- **The Numbers - THE NUMBERS!!**: One of the most frustrating aspects was Duolingo's difficulty with spoken numbers.  It simply can't understand numbers in speaking exercises. That made exercises involving numbers often felt cumbersome and less effective.
 - **Temptation to Switch**: At times, I considered switching to another language, but I decided to stick with Norwegian, knowing that persistence is key in language learning.
 
 ### Progress and Achievements
@@ -45,10 +45,12 @@ Despite the challenges, there were several highlights along the way:
 
 ## What Have I Learned?
 
-After 400 days, I’ve gained a decent understanding of the basics:
+After 365 days, I’ve gained a decent understanding of the basics:
 
 - **Foundational Vocabulary**: I can confidently use traveling words, discuss life and family, and engage in basic conversations.
 - **Media Comprehension**: I’ve started to pick up on words and phrases while watching Norwegian shows, which feels like a small but significant victory.
+
+However, Duolingo alone only covers the basics. To gain a deeper understanding, better vocabulary and fluency, it’s essential to supplement with additional learning methods, such as consuming Norwegian media (series, movies, news) and engaging in real-life conversations.
 
 ### Key Takeaways
 
@@ -58,5 +60,5 @@ Language learning is a marathon, not a sprint. While I’ve only scratched the s
 
 My journey with Norwegian is far from over. I plan to continue my daily practice and hope to visit Norway in the coming years. There’s nothing quite like testing your language skills in real-life situations, and I look forward to that challenge. 
 
-Here’s to the next 400 days—and beyond!
+This is actually a post I wrote over a month ago but publishing now - my current streak is 404. No, not the "not found" error message - streak is still going strong with 404 days :)
 
