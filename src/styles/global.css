@@ -33,3 +33,71 @@ body {
   max-width: 980px;
   margin: 0 auto;
 }
+
+.name-animation {
+  letter-spacing: -0.10em; /* Adjust to control how close the letters are */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Optional for a subtle upward movement */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-1 { 
+  opacity: 0; /* Ensure opacity is initially 0 */
+  animation: fadeIn 0.5s ease-out 0s forwards; 
+}
+.fade-in-2 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.1s forwards; 
+}
+.fade-in-3 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.2s forwards; 
+}
+.fade-in-4 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.3s forwards; 
+}
+.fade-in-5 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.4s forwards; 
+}
+.fade-in-6 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.5s forwards; 
+}
+.fade-in-7 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.6s forwards; 
+}
+.fade-in-8 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.7s forwards; 
+}
+.fade-in-9 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.8s forwards; 
+}
+.fade-in-10 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.9s forwards; 
+}
+.fade-in-11 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 1s forwards; 
+}
+.fade-in-12 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 1.1s forwards; 
+}
+.fade-in-13 { 
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 1.2s forwards; 
+}

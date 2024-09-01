@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+import BaseLayout from "../../layouts/Layout.astro";
+---
+
+<BaseLayout title="Arttu Nikkilä - Blog">
+  <section class="container mx-auto px-4 wrapper pt-12 pb-8">
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
+      {
+        posts.map((post, index) => (
+          <li class={`${index === 0 ? 'md:col-span-2' : ''}`}>
+            <a href={`/blog/${post.slug}/`} class="block transition-transform hover:scale-105">
+              <img 
+                width={720} 
+                height={360} 
+                class="rounded-lg mb-4 w-full object-cover" 
+                src={post.data.heroImage} 
+                alt="" 
+              />
+              <h4 class={`text-black ${index === 0 ? 'text-4xl' : 'text-2xl'} font-bold`}>
+                {post.data.title}
+              </h4>
+              <p class="text-gray-500">
+                <FormattedDate date={post.data.pubDate} />
+              </p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>

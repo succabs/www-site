@@ -9,6 +9,7 @@ const skillCategories = [
     { name: 'CSS3', icon: 'skill-icons:css' },
       { name: 'JavaScript', icon: 'skill-icons:javascript' },
       { name: 'TypeScript', icon: 'skill-icons:typescript' },
+      { name: 'Liquid', icon: 'vscode-icons:file-type-liquid' },
       { name: 'Python', icon: 'skill-icons:python-light' },
       { name: 'Java', icon: 'skill-icons:java-light' },
     ],
@@ -27,8 +28,8 @@ const skillCategories = [
   {
     category: 'Tools & Other stuff',
     skills: [
+    { name: 'Google Analytics', icon: 'logos:google-analytics' },
       { name: 'Git', icon: 'skill-icons:git' },
-      { name: 'Linux (Unix)', icon: 'skill-icons:linux-light' },
       { name: 'Docker', icon: 'skill-icons:docker' },
       { name: 'Visual Studio Code', icon: 'skill-icons:vscode-light' },
       { name: 'PostgreSQL (SQL)', icon: 'skill-icons:postgresql-light' },
@@ -37,6 +38,10 @@ const skillCategories = [
       { name: 'Nginx', icon: 'skill-icons:nginx' },
       { name: 'Vite', icon: 'skill-icons:vite-light' },
       { name: 'Figma', icon: 'skill-icons:figma-light' },
+      { name: 'Jira', icon: 'logos:jira' },
+      { name: 'Teamwork', icon: 'logos:teamwork-icon' },
+      { name: 'Teams', icon: 'logos:microsoft-teams' },
+      { name: 'Linux', icon: 'skill-icons:linux-light' },
     ],
   },
 ];
@@ -44,7 +49,7 @@ const skillCategories = [
 
 <section class='py-12'>
   <div class='container mx-auto px-4'>
-    <h2 class='text-3xl font-bold text-center mb-8'>My Skills</h2>
+    <h2 class='text-3xl font-bold text-center mb-8'>Skills</h2>
 
     <!-- Loop through each category -->
     {
@@ -62,6 +67,5 @@ const skillCategories = [
         </div>
       ))
     }
-    <p>+ Jira, Teamwork, Teams, Google Workspace, Channable. Man of many gadgets in the toolbox.</p>
   </div>
 </section>

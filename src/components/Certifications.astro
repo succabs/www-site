@@ -1,0 +1,35 @@
+---
+import CertificationsCard from '../components/CertificationsCard.astro';
+
+const certifications = [
+  {
+    title: 'Channable Feed Management',
+    issuer: 'Channable',
+    date: 'August 22, 2024',
+    link: 'https://www.credential.net/2a263c35-11c0-442b-b97f-ccb696729331#gs.e5zz7z',
+  },
+  {
+    title: 'Google Analytics Certification',
+    issuer: 'Skillshop',
+    date: 'August 23, 2024',
+    link: 'https://skillshop.credential.net/e2cfdcba-1898-4ffb-918d-baea0ccc8916',
+  },
+];
+---
+
+<section class="pb-12">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {certifications.map((cert) => (
+        <CertificationsCard 
+          title={cert.title}
+          issuer={cert.issuer}
+          date={cert.date}
+          link={cert.link}
+        />
+      ))}
+    </div>
+  </div>
+</section>
