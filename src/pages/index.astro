@@ -34,11 +34,12 @@ const posts = (await getCollection('blog')).sort(
               <a href={`/blog/${post.slug}/`} class="block">
                 <img 
                   class="w-full h-48 object-cover"
+                  loading="lazy"
                   src={post.data.heroImage} 
                   alt={post.data.title} 
                 />
                 <div class="p-4">
-                  <h4 class="text-xl font-semibold mb-2 ">{post.data.title}</h4>
+                  <h5 class="text-xl mb-2 ">{post.data.title}</h5>
                   <p class="text-gray-500 mb-4">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
