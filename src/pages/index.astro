@@ -1,25 +1,66 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
 import About from '../components/About.astro';
 import TimeLine from '../components/TimeLine.astro';
 import Skills from '../components/Skills.astro';
 import Projects from '../components/Projects.astro';
-import Footer from '../components/Footer.astro';
 
-import '../styles/global.css';
+
+import Certifications from '../components/Certifications.astro';
+
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const latestPosts = posts.slice(0, 3); // Get the latest 3 posts
 ---
 
 <Layout title='Arttu Nikkilä'>
-  <Navigation />
-  <main class='wrapper bg-background'>
+  <main class="wrapper">
     <About />
     <TimeLine />
     <Projects />
     <Skills />
-    <Footer />
+    <Certifications />
+
+    <section class="py-8 px-4">
+      <h2 class='text-3xl font-bold text-center mb-8'>Latest blog posts</h2>
+      
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          latestPosts.map((post) => (
+            <li class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
+              <a href={`/blog/${post.slug}/`} class="block">
+                <img 
+                  class="w-full h-48 object-cover"
+                  src={post.data.heroImage} 
+                  alt={post.data.title} 
+                />
+                <div class="p-4">
+                  <h4 class="text-xl font-semibold mb-2">{post.data.title}</h4>
+                  <p class="text-gray-500 mb-4">
+                    <FormattedDate date={post.data.pubDate} />
+                  </p>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    
+      <div class="mt-6 text-center">
+        <a 
+          class="inline-block text-lg font-medium text-blue-500 hover:text-blue-700 hover:underline"
+          href="/blog" 
+          title="All Posts"
+        >
+          All Posts &rarr;
+        </a>
+      </div>
+    </section>
+    
+
+
   </main>
 </Layout>
-<script>
-  import '../scripts/menu.js';
-</script>

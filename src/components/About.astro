@@ -4,33 +4,50 @@ import myImage from '../media/me.jpg';
 import { Icon } from 'astro-icon/components';
 ---
 
-<section class='text-body pt-12 md:pt-16 pb-8'>
+<section id="about" class='text-body pt-12 md:pt-16 pb-8'>
   <div
-    class='container mx-auto flex flex-col-reverse md:flex-row items-center px-2'
+    class='container mx-auto flex flex-col-reverse md:flex-row items-center px-4'
   >
     <!-- Left Section: Greeting, Subheading, Text, Social Icons, Buttons -->
     <div class='md:w-1/2 text-left space-y-6'>
-      <h1 class='text-5xl md:text-4xl font-bold text-center md:text-left'>
-        Hi, my name is
-        <span class='text-secondary'>Arttu</span>
-        <span
-          class='text-primary'>Nikkilä</span
-        >.
+      <h1 class="text-4xl md:text-3xl font-bold text-center md:text-left tracking-tight">
+        Hi, my name is 
+        <span class="name-animation">
+          <span class="inline-block ml-2 md:ml-1 fade-in-1 text-primary">A</span>
+          <span class="inline-block fade-in-2 text-primary">r</span>
+          <span class="inline-block fade-in-3 text-primary">t</span>
+          <span class="inline-block fade-in-4 text-primary">t</span>
+          <span class="inline-block fade-in-5 text-primary">u</span>
+        
+          <span class="inline-block ml-2 fade-in-6 text-secondary">N</span>
+          <span class="inline-block fade-in-7 text-secondary">i</span>
+          <span class="inline-block fade-in-8 text-secondary">k</span>
+          <span class="inline-block fade-in-9 text-secondary">k</span>
+          <span class="inline-block fade-in-10 text-secondary">i</span>
+          <span class="inline-block fade-in-11 text-secondary">l</span>
+          <span class="inline-block fade-in-12 text-secondary">ä</span>
+          <span class="inline-block fade-in-13">.</span>
+        </span>
+        
       </h1>
-      <h2 class='text-xl text-center md:text-left font-semibold text-heading'>I am a developer.</h2>
+      
+      
+
+
+
+      <h2 class='text-xl text-center md:text-left font-semibold text-heading'>I combine art(tu) with tech.</h2>
       <p class=' text-body text-center md:text-left'>
         In my current role I adapt to a wide range of situations deeply in the <span
           class='italic'>client interface</span
         >, balancing technical expertise with customer-facing responsibilities in the field of eCommerce.
       </p>
-      <p class="text-center md:text-left">Outside of computer world I enjoy playing guitar, consuming science fiction media, researching obscure stuff and occasional magnet fishing.</p>
-
+      <p class="text-center md:text-left">Outside the computer world I enjoy playing guitar, diving into science fiction, exploring obscure topics, and occasionally, magnet fishing.</p>
       <!-- Social Icons -->
       <div class='flex justify-center md:justify-start space-x-6'>
         <a href='https://github.com/succabs' target='_blank' class='text-4xl'
           ><Icon class='fab fa-2x' name='skill-icons:github-dark' /></a
         >
-        <a href='https://linkedin.com/li/arttu-nikkila' target='_blank' class='text-4xl'
+        <a href='https://linkedin.com/in/arttu-nikkila' target='_blank' class='text-4xl'
           ><Icon class='fab fa-2x' name='skill-icons:linkedin' /></a
         >
       </div>
