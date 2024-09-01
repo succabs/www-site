@@ -38,7 +38,7 @@ const posts = (await getCollection('blog')).sort(
                   alt={post.data.title} 
                 />
                 <div class="p-4">
-                  <h4 class="text-xl font-semibold mb-2">{post.data.title}</h4>
+                  <h4 class="text-xl font-semibold mb-2 ">{post.data.title}</h4>
                   <p class="text-gray-500 mb-4">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
@@ -51,7 +51,7 @@ const posts = (await getCollection('blog')).sort(
     
       <div class="mt-6 text-center">
         <a 
-          class="inline-block text-lg font-medium text-blue-500 hover:text-blue-700 hover:underline"
+          class="inline-block text-lg font-medium underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
           href="/blog" 
           title="All Posts"
         >
