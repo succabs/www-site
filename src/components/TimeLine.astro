@@ -2,8 +2,11 @@
 import { Icon } from 'astro-icon/components';
 ---
 
+<h2 class='text-3xl font-bold text-center mb-16 text-heading'>Timeline of relevant events</h2>
+
+
 <div
-  class='space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent mx-4 pt-8'
+  class='space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-800 before:to-transparent mx-4 pt-8'
 >
 
 
@@ -19,19 +22,25 @@ import { Icon } from 'astro-icon/components';
     </div>
     <!-- Card -->
     <div
-      class='w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow'
+      class='w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-background p-4 rounded border border-slate-200 shadow'
     >
     <div class='flex justify-between space-x-1 mb-1'>
-      <div class='flex flex-col sm:flex-row'>
-        <span class='font-bold text-slate-900'>Developer, </span>
-        <span class='font-bold text-slate-900'>Woolman</span>
+      <div class='flex-1'>
+        <span class='font-bold text-body'>Developer, </span>
+        <span class='font-bold text-body'>Woolman</span>
       </div>
-      <time class='flex-shrink-0 text-slate-500 text-xs whitespace-nowrap'>03/2024 - Present</time>
+      <time class='flex-shrink-0 text-heading text-xs whitespace-nowrap'>03/2024 - Present</time>
     </div>
     
     
-      <div class='text-slate-500'>Shopify theme development & related work with Liquid, HTML, CSS, Javascript, React, GraphQL, REST API.</div>
-      <div class='text-slate-500'>Analytics setups and integrations of stores with web pixels, GTM, GA4, Piwik and various CMP's.</div>
+      <li class='text-body'>Shopify theme development & related work with Liquid, HTML, CSS, Javascript, React, GraphQL, REST API.</li>
+      <li class='text-body'>Analytics setups and integrations on stores with web pixels, GTM, GA4, Piwik and various CMP's.</li>
+      <li class='text-body'>Solo developer on various projects - capable of handling development of small to medium size projects by myself.</li>
+      <li class='text-body'>I leverage AI tools (including ChatGPT and CoPilot) as part of my daily workflow.</li>
+
+
+  
+
     </div>
   </div>
 
@@ -47,19 +56,29 @@ import { Icon } from 'astro-icon/components';
     </div>
     <!-- Card -->
     <div
-      class='w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow'
+      class='w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-background p-4 rounded border border-slate-200 shadow'
     >
     <div class='flex justify-between space-x-1 mb-1'>
       <div class='flex-1'>
-        <span class='font-bold text-slate-900'>Junior Developer, </span>
-        <span class='font-bold text-slate-900'>Woolman</span>
+
+        <span class='font-bold text-body'>Junior Developer, </span>
+        <span class='font-bold text-body'>Woolman</span>
       </div>
-      <time class='flex-shrink-0 text-slate-500 text-xs whitespace-nowrap'>09/2023 - 03/2024</time>
+      <time class='flex-shrink-0 text-heading text-xs whitespace-nowrap'>09/2023 - 03/2024</time>
     </div>
     
-      <div class='text-slate-500'>
-      I landed a job at Woolman via Saranen Developer Academy. Started with basic theme development tasks with Liquid, Javascript, HTML and CSS. Got more responsibility and harder tasks as time went by.
-      </div>
+      <li class='text-body'>
+        Landed a job at Woolman via Saranen Developer Academy.
+        </li>
+        <li class='text-body'>
+          Theme development tasks with Liquid, Javascript, HTML and CSS.
+          </li>
+          <li class='text-body'>
+            Both support and project work.
+            </li>
+            <li class='text-body'>
+              Got to know the Shopify platform, its ecosystem and web development in general with the help of amazing mentors.
+              </li>
 
     </div>
   </div>
@@ -76,23 +95,23 @@ import { Icon } from 'astro-icon/components';
     </div>
     <!-- Card -->
     <div
-      class='w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow'
+      class='w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-background p-4 rounded border border-slate-200 shadow'
     >
       <div class='flex justify-between space-x-2 mb-1'>
-        <div class='font-bold text-slate-900'>
+        <div class='font-bold text-body'>
           Bachelor of Science in Mathematical Information Technology
         </div>
-        <time class='text-slate-500  text-xs text-right'>06/2023</time>
+        <time class='text-heading text-xs text-right'>06/2023</time>
       </div>
-      <div class='text-slate-500'>University of Jyväskylä</div>
-      <p class="text-slate-500">Major: <span class="text-slate-900">Computer Science</span></p>
-      <p class="text-slate-500">Minor: <span class="text-slate-900">Psychology</span></p>
-      <p class="text-slate-500">Bachelor's thesis: <span class="text-slate-900">Esoteric Programming Languages</span></p>
+      <div class='text-heading'>University of Jyväskylä</div>
+      <p class="text-heading">Major: <span class="text-body">Computer Science</span></p>
+      <p class="text-heading">Minor: <span class="text-body">Psychology</span></p>
+      <p class="text-heading">Bachelor's thesis: <a href="https://jyx.jyu.fi/handle/123456789/81727"><span class="text-blue-500 hover:text-blue-600">Esoteric Programming Languages</span></a></p>
     </div>
   </div>
 </div>
 
 <div
-  class='top-0 left-0 right-0 h-0.5 bg-gradient-to-l from-transparent via-gray-300 to-transparent my-12'
+  class='top-0 left-0 right-0 h-0.5 bg-gradient-to-l from-transparent via-slate-400 to-transparent my-12'
 >
 </div>
