@@ -15,7 +15,7 @@ import BaseLayout from "../../layouts/Layout.astro";
 
 <BaseLayout title="Arttu Nikkilä - Blog">
   <section class="container mx-auto px-4 wrapper pt-12 pb-8">
-    <h1 class="text-3xl font-bold text-center mb-8">Blog</h1>
+    <h1 class="text-3xl font-bold text-center mb-8 text-heading">Blog</h1>
     <p class="text-body mb-8">From this blog you can find out my thoughts and experiences about variety of things.</p>
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
       {
@@ -29,10 +29,10 @@ import BaseLayout from "../../layouts/Layout.astro";
                 src={post.data.heroImage} 
                 alt="" 
               />
-              <h4 class={`text-black ${index === 0 ? 'text-4xl' : 'text-2xl'} font-bold`}>
+              <h4 class={`text-heading ${index === 0 ? 'text-4xl' : 'text-2xl'} font-bold`}>
                 {post.data.title}
               </h4>
-              <p class="text-gray-500">
+              <p class="text-heading">
                 <FormattedDate date={post.data.pubDate} />
               </p>
               <div class="flex flex-wrap gap-2 mt-2">

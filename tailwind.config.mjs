@@ -9,11 +9,13 @@ export default {
         sans: ['Lato', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: '#1f4b7e', // Deep blue
-        secondary: '#f39c12', // Soft orange
-        background: '#f7f7f7', // Very light gray
-        body: '#2e2e2e', // Dark gray
-        heading: '#333', // Slightly darker gray
+        primary: '#1ABC9C', // Deep blue
+        secondary: '#F39C12', // Soft orange
+        background: '#121212', // Very light gray
+        body: '#EAEAEA', // Dark gray
+        heading: '#B3B3B3', // Slightly darker gray
+        divider: '#333333', // Dark gray
+        highlight: '#16A085',
       },
     },
   },
