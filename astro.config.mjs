@@ -1,9 +1,12 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import tailwind from '@astrojs/tailwind';
 
-import icon from "astro-icon";
+import icon from 'astro-icon';
+
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), icon()]
+  site: 'https://arttu.net',
+  integrations: [tailwind(), icon(), sitemap()],
 });

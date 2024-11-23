@@ -1,6 +1,6 @@
 # WWW-SITE
 
-This is the repository for my portfolio website. 
+This is the repository for my portfolio website.
 
 Made with Astro and TailwindCSS.
 
@@ -17,3 +17,9 @@ Keywords: Responsive, Informative, Sleek, Dark
 - projects to pop up to full screen dialog
 - spice it up
 
+## Changelog
+
+### 2024.11.23
+
+- Mobile hamburger menu placement and line heights fixed
+- Blog font color to white & width to 80ch

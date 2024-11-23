@@ -17,9 +17,35 @@ export default {
         divider: '#333333', // Dark gray
         highlight: '#16A085',
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: '80ch', // add required value here
+            h1: {
+              color: theme('colors.heading'), // Use your custom 'heading' color
+            },
+            h2: {
+              color: theme('colors.heading'), // Same color for all headings (optional)
+            },
+            h3: {
+              color: theme('colors.heading'),
+            },
+            h4: {
+              color: theme('colors.heading'),
+            },
+            h5: {
+              color: theme('colors.heading'),
+            },
+            h6: {
+              color: theme('colors.heading'),
+            },
+            strong: {
+              color: theme('colors.heading'),
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('@tailwindcss/typography')],
 };

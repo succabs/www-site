@@ -2,9 +2,9 @@
 title: '365 Days of Learning Norwegian on Duolingo'
 description: 'After a year of dedicated practice on Duolingo, I’ve not only learned some of the basics of Norwegian but also gained insights into the challenges and rewards of long-term language learning. In this post, I share my journey, the ups and downs, and my plans for continuing this linguistic adventure.'
 pubDate: 'Aug 29 2024'
-heroImage: '/norway.jpg'
+heroImage: '/blog_images/norway.jpg'
 author: 'Arttu Nikkilä'
-tags: ["learning", "languages", "lifestyle"]
+tags: ['learning', 'languages', 'lifestyle']
 ---
 
 This is the story of an achievement I have quietly done over the year: I finally hit the 365-day streak on Duolingo! Read on to discover what I’ve learned during this time and how this journey has shaped my perspective.
@@ -31,7 +31,7 @@ Consistency was key. I committed to practicing 5-10 minutes daily, usually squee
 Reaching 365 days wasn’t without its hurdles:
 
 - **Maintaining the Streak**: There were days when I struggled to find the time to continue my streak, but fortunately, Duolingo offers streak freezes, which were a lifesaver on more than one occasion.
-- **The Numbers - THE NUMBERS!!**: One of the most frustrating aspects was Duolingo's difficulty with spoken numbers.  It simply can't understand numbers in speaking exercises. That made exercises involving numbers often felt cumbersome and less effective.
+- **The Numbers - THE NUMBERS!!**: One of the most frustrating aspects was Duolingo's difficulty with spoken numbers. It simply can't understand numbers in speaking exercises. That made exercises involving numbers often felt cumbersome and less effective.
 - **Temptation to Switch**: At times, I considered switching to another language, but I decided to stick with Norwegian, knowing that persistence is key in language learning.
 
 ### Progress and Achievements
@@ -58,7 +58,6 @@ Language learning is a marathon, not a sprint. While I’ve only scratched the s
 
 ## Looking Ahead
 
-My journey with Norwegian is far from over. I plan to continue my daily practice and hope to visit Norway in the coming years. There’s nothing quite like testing your language skills in real-life situations, and I look forward to that challenge. 
+My journey with Norwegian is far from over. I plan to continue my daily practice and hope to visit Norway in the coming years. There’s nothing quite like testing your language skills in real-life situations, and I look forward to that challenge.
 
 This is actually a post I wrote over a month ago but publishing now - my current streak is 404. No, not the "not found" error message - streak is still going strong with 404 days :)
-

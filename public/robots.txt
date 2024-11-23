@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arttu.net/sitemap-index.xml
