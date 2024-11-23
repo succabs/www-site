@@ -18,13 +18,40 @@ import '../styles/global.css';
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css"
+  />
     <title>{title}</title>
+
+    <script
+    is:inline
+    src="https://www.googletagmanager.com/gtag/js?id=G-6HJEWEKWH9"
+></script>
+
+<script data-category="analytics" is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+  });
+
+  gtag("config", "G-6HJEWEKWH9");
+</script>
   </head>
   <body class='bg-background'>
     <Navigation />
     <slot class='wrapper bg-background' />
 
     <Footer />
+    <script type="module" src="/src/scripts/cookieconsent-config.js"></script>
   </body>
 </html>
 
