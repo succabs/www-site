@@ -1,0 +1,20 @@
+---
+import 'vanilla-cookieconsent/dist/cookieconsent.css';
+import { Icon } from 'astro-icon/components'
+---
+
+
+<button
+    id="cookiePreferencesBtn"
+    class="fixed bottom-2 left-2 px-4 py-4 bg-primary text-background font-medium rounded-full shadow-md transition"
+    data-cc="show-preferencesModal"
+  >
+  <Icon class="text-2xl" name="mdi:cookie-cog-outline" />
+  </button>
+
+<script>
+  import { run } from "vanilla-cookieconsent";
+  import { config } from "./CookieConsentConfig";
+
+  run(config);
+</script>
