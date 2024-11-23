@@ -20,7 +20,10 @@ Keywords: Responsive, Informative, Sleek, Dark
 - spice it up
 - blog to have pages
 - blog sorting from time and filtering with tags
--
+- nappien kontrastit
+- certtinappi kontrasti
+- aika timeline kontrasti
+- heading järjestys -> valitus blog post osion titlestä
 
 ## Changelog
 

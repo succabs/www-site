@@ -39,7 +39,7 @@ const posts = (await getCollection('blog')).sort(
                   alt={post.data.title} 
                 />
                 <div class="p-4">
-                  <h5 class="text-xl mb-2 ">{post.data.title}</h5>
+                  <h4 class="text-xl mb-2 text-heading">{post.data.title}</h5>
                   <p class="text-gray-500 mb-4">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
