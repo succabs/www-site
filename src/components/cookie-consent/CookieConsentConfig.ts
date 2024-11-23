@@ -1,5 +1,7 @@
 import type { CookieConsentConfig } from 'vanilla-cookieconsent';
 
+document.documentElement.classList.add('cc--darkmode');
+
 declare global {
   interface Window {
     dataLayer: Record<string, any>[];
