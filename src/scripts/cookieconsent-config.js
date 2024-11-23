@@ -17,8 +17,11 @@ CookieConsent.run({
       equalWeightButtons: true,
       flipButtons: false,
     },
-    onFirstConsent: function (cookie) {
-      // callback triggered only once on the first accept/reject action
+    onConsent: () => {
+      updateGtagConsent();
+    },
+    onChange: ({ changedCategories }) => {
+      updateGtagConsent();
     },
   },
   categories: {
@@ -28,7 +31,6 @@ CookieConsent.run({
     },
     functionality: {},
     analytics: { enabled: false },
-
     marketing: {},
   },
   language: {
@@ -114,3 +116,27 @@ CookieConsent.run({
     },
   },
 });
+
+function updateGtagConsent() {
+  console.log(cookie);
+  gtag('consent', 'update', {
+    ad_storage: CookieConsent.acceptedCategory('advertisement')
+      ? 'granted'
+      : 'denied',
+    ad_user_data: CookieConsent.acceptedCategory('advertisement')
+      ? 'granted'
+      : 'denied',
+    ad_personalization: CookieConsent.acceptedCategory('advertisement')
+      ? 'granted'
+      : 'denied',
+    analytics_storage: CookieConsent.acceptedCategory('analytics')
+      ? 'granted'
+      : 'denied',
+    functionality_storage: CookieConsent.acceptedCategory('functional')
+      ? 'granted'
+      : 'denied',
+    personalization_storage: CookieConsent.acceptedCategory('functional')
+      ? 'granted'
+      : 'denied',
+  });
+}
