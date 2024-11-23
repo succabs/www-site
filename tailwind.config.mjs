@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Lato', ...defaultTheme.fontFamily.sans],
+        sans: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: '#1ABC9C', // Deep blue

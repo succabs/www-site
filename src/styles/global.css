@@ -4,8 +4,16 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('/fonts/lato-regular.woff2') format('woff2');
+  src: url('/fonts/SourceSans3-VariableFont_wght.woff2') format('woff2');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('/fonts/Exo-VariableFont_wght.woff2') format('woff2');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -13,6 +21,16 @@
 @layer utilities {
   .hamburger-toggle {
     @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Exo';
   }
 }
 
@@ -35,7 +53,7 @@ body {
 }
 
 .name-animation {
-  letter-spacing: -0.10em; /* Adjust to control how close the letters are */
+  letter-spacing: -0.1em; /* Adjust to control how close the letters are */
 }
 
 @keyframes fadeIn {
@@ -49,55 +67,55 @@ body {
   }
 }
 
-.fade-in-1 { 
+.fade-in-1 {
   opacity: 0; /* Ensure opacity is initially 0 */
-  animation: fadeIn 0.5s ease-out 0s forwards; 
+  animation: fadeIn 0.5s ease-out 0s forwards;
 }
-.fade-in-2 { 
+.fade-in-2 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.1s forwards; 
+  animation: fadeIn 0.5s ease-out 0.1s forwards;
 }
-.fade-in-3 { 
+.fade-in-3 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.2s forwards; 
+  animation: fadeIn 0.5s ease-out 0.2s forwards;
 }
-.fade-in-4 { 
+.fade-in-4 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.3s forwards; 
+  animation: fadeIn 0.5s ease-out 0.3s forwards;
 }
-.fade-in-5 { 
+.fade-in-5 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.4s forwards; 
+  animation: fadeIn 0.5s ease-out 0.4s forwards;
 }
-.fade-in-6 { 
+.fade-in-6 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.5s forwards; 
+  animation: fadeIn 0.5s ease-out 0.5s forwards;
 }
-.fade-in-7 { 
+.fade-in-7 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.6s forwards; 
+  animation: fadeIn 0.5s ease-out 0.6s forwards;
 }
-.fade-in-8 { 
+.fade-in-8 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.7s forwards; 
+  animation: fadeIn 0.5s ease-out 0.7s forwards;
 }
-.fade-in-9 { 
+.fade-in-9 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.8s forwards; 
+  animation: fadeIn 0.5s ease-out 0.8s forwards;
 }
-.fade-in-10 { 
+.fade-in-10 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.9s forwards; 
+  animation: fadeIn 0.5s ease-out 0.9s forwards;
 }
-.fade-in-11 { 
+.fade-in-11 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 1s forwards; 
+  animation: fadeIn 0.5s ease-out 1s forwards;
 }
-.fade-in-12 { 
+.fade-in-12 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 1.1s forwards; 
+  animation: fadeIn 0.5s ease-out 1.1s forwards;
 }
-.fade-in-13 { 
+.fade-in-13 {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 1.2s forwards; 
+  animation: fadeIn 0.5s ease-out 1.2s forwards;
 }

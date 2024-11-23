@@ -12,10 +12,15 @@ Keywords: Responsive, Informative, Sleek, Dark
 
 ## Todo
 
-- favicon
-- animated sections
+- more room to breathe to front page
+- font change? at least heading font should be serif
+- favicon after font change
+- animated sections ?
 - projects to pop up to full screen dialog
 - spice it up
+- blog to have pages
+- blog sorting from time and filtering with tags
+-
 
 ## Changelog
 
