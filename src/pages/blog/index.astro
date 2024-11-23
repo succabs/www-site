@@ -9,8 +9,10 @@ const posts = (await getCollection('blog')).sort(
 const tags = posts.map((p) => p.data.tags).flat();
 const uniqueTags = [...new Set(tags)];
 
-import BaseLayout from "../../layouts/Layout.astro";
+// Extract the featured post (always the newest post)
+const [featuredPost, ...otherPosts] = posts;
 
+import BaseLayout from "../../layouts/Layout.astro";
 ---
 
 <BaseLayout title="Arttu Nikkilä - Blog">
@@ -18,46 +20,177 @@ import BaseLayout from "../../layouts/Layout.astro";
     <h1 class="text-3xl font-bold text-center mb-8 text-heading">Blog</h1>
     <p class="text-body mb-8">
       A warm welcome to my blog — a mix of web development insights, personal stories, and a bit of everything I love. Here, I share do's and don'ts for building better websites, rant about things that drive me crazy in tech, and dive into my favorite sci-fi books, TV series, and even personal topics like living with psoriasis. If you are like me, you may find that there is something to learn in every topic!
-
     </p>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
-      {
-        posts.map((post, index) => (
-          <li class={`${index === 0 ? 'md:col-span-2 relative' : ''} ${post.data.tags.join(" ")}`}>
-            <a href={`/blog/${post.slug}/`} class="block transition-transform hover:scale-105">
-              
-              {/* Featured Label */}
-              {index === 0 && (
-                <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-md text-xs uppercase font-bold shadow-md">
-                  Featured
-                </span>
-              )}
-    
-              <img 
-                width={720} 
-                height={360} 
-                class="rounded-lg mb-4 w-full object-cover" 
-                src={post.data.heroImage} 
-                alt="" 
-              />
-              <h4 class={`text-heading ${index === 0 ? 'text-4xl' : 'text-2xl'} font-bold`}>
-                {post.data.title}
-              </h4>
-              <p class="text-heading">
-                <FormattedDate date={post.data.pubDate} />
-              </p>
-              <div class="flex flex-wrap gap-2 mt-2">
-                {post.data.tags.map(tag => (
-                  <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
-          </li>
-        ))
-      }
+
+    {/* Featured Post */}
+    <div id="featured-post" class="mb-8">
+      <a href={`/blog/${featuredPost.slug}/`} class="block transition-transform hover:scale-105 relative">
+        <img
+          width={720}
+          height={360}
+          class="rounded-lg mb-4 w-full object-cover"
+          src={featuredPost.data.heroImage}
+          alt=""
+        />
+        <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-md text-xs uppercase font-bold shadow-md">
+          Featured
+        </span>
+        <h4 class="text-heading text-4xl font-bold">{featuredPost.data.title}</h4>
+        <p class="text-heading">
+          <FormattedDate date={featuredPost.data.pubDate} />
+        </p>
+        <div class="flex flex-wrap gap-2 mt-2">
+          {featuredPost.data.tags.map((tag) => (
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">{tag}</span>
+          ))}
+        </div>
+      </a>
+    </div>
+
+    {/* Sorting and Filters */}
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">All Posts</h2>
+      <div class="flex flex-wrap justify-between items-center mb-4">
+        {/* Sorting Dropdown */}
+        <div class="relative">
+          <label for="sort" class="block text-sm font-medium text-gray-700">Sort by:</label>
+          <select
+            id="sort"
+            class="block w-full mt-1 bg-gray-200 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+          >
+            <option value="newest">Newest to Oldest</option>
+            <option value="oldest">Oldest to Newest</option>
+          </select>
+        </div>
+
+        {/* Filters Heading */}
+        <h3 class="text-lg font-semibold">Filter by Tags:</h3>
+      </div>
+
+      {/* Filters */}
+      <div id="tags" class="flex flex-wrap gap-2">
+        {['All', ...uniqueTags].map((tag) => (
+          <button
+            class="px-4 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-300 transition"
+            data-type={tag}
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    {/* Filterable Posts */}
+    <ul id="post-list" class="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
+      {otherPosts.map((post) => (
+        <li
+          class={`${post.data.tags.join(" ")}`}
+          data-tags={post.data.tags.join(",")}
+          data-date={post.data.pubDate.toISOString()}
+        >
+          <a href={`/blog/${post.slug}/`} class="block transition-transform hover:scale-105">
+            <img
+              width={720}
+              height={360}
+              class="rounded-lg mb-4 w-full object-cover"
+              src={post.data.heroImage}
+              alt=""
+            />
+            <h4 class="text-heading text-2xl font-bold">{post.data.title}</h4>
+            <p class="text-heading">
+              <FormattedDate date={post.data.pubDate} />
+            </p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              {post.data.tags.map((tag) => (
+                <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">{tag}</span>
+              ))}
+            </div>
+          </a>
+        </li>
+      ))}
     </ul>
-    
+
   </section>
+
+  {/* TypeScript for Filtering and Sorting */}
+  <script>
+    const activeTags: string[] = []; // Track currently selected tags
+    let sortDirection: "newest" | "oldest" = "newest"; // Track sorting direction
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const tagsContainer = document.getElementById("tags");
+      const postList = document.getElementById("post-list");
+      const sortSelect = document.getElementById("sort") as HTMLSelectElement;
+
+      if (!tagsContainer || !postList || !sortSelect) {
+        console.error("Tags container, post list, or sorting dropdown not found");
+        return;
+      }
+
+      // Tag filtering logic
+      const buttons = tagsContainer.querySelectorAll<HTMLButtonElement>("button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const tag = button.getAttribute("data-type");
+          if (!tag) return;
+
+          // Toggle the tag in activeTags
+          if (tag === "All") {
+            activeTags.length = 0; // Clear all filters if "All" is clicked
+          } else {
+            const index = activeTags.indexOf(tag);
+            if (index > -1) {
+              activeTags.splice(index, 1); // Remove tag if active
+            } else {
+              activeTags.push(tag); // Add tag if inactive
+            }
+          }
+
+          updatePostVisibility();
+        });
+      });
+
+      // Sorting logic
+      sortSelect.addEventListener("change", (event) => {
+        sortDirection = sortSelect.value as "newest" | "oldest";
+        sortPosts();
+      });
+
+      function updatePostVisibility() {
+        const posts = postList.querySelectorAll<HTMLLIElement>("li[data-tags]");
+        posts.forEach((post) => {
+          const postTags = post.getAttribute("data-tags")?.split(",") || [];
+          const isVisible =
+            activeTags.length === 0 || activeTags.some((activeTag) => postTags.includes(activeTag));
+          post.style.display = isVisible ? "block" : "none";
+        });
+
+        // Update button styles
+      buttons.forEach((button) => {
+        const buttonTag = button.getAttribute("data-type");
+        if (buttonTag === "All" && activeTags.length === 0) {
+          button.classList.add("bg-primary", "text-white");
+          button.classList.remove("bg-gray-200", "text-gray-800");
+        } else if (buttonTag && activeTags.includes(buttonTag)) {
+          button.classList.add("bg-primary", "text-white");
+          button.classList.remove("bg-gray-200", "text-gray-800");
+        } else {
+          button.classList.add("bg-gray-200", "text-gray-800");
+          button.classList.remove("bg-primary", "text-white");
+        }
+      });
+      }
+
+      function sortPosts() {
+        const postsArray = Array.from(postList.querySelectorAll<HTMLLIElement>("li"));
+        postsArray.sort((a, b) => {
+          const dateA = new Date(a.getAttribute("data-date")!);
+          const dateB = new Date(b.getAttribute("data-date")!);
+          return sortDirection === "newest" ? dateB.getTime() - dateA.getTime() : dateA.getTime() - dateB.getTime();
+        });
+
+        postsArray.forEach((post) => postList.appendChild(post));
+      }
+    });
+  </script>
 </BaseLayout>
