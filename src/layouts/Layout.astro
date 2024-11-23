@@ -7,6 +7,7 @@ const { title } = Astro.props;
 
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import { Icon } from 'astro-icon/components'
 ---
 
 <!doctype html>
@@ -47,11 +48,18 @@ import '../styles/global.css';
 </script>
   </head>
   <body class='bg-background'>
+   
     <Navigation />
     <slot class='wrapper bg-background' />
 
     <Footer />
-    
+    <button
+    id="cookiePreferencesBtn"
+    class="fixed bottom-2 left-2 px-4 py-4 bg-primary text-background font-medium rounded-full shadow-md transition"
+    onclick="CookieConsent.show(true);"
+  >
+  <Icon class="text-2xl" name="mdi:cookie-cog-outline" />
+  </button>
   </body>
 </html>
 
@@ -59,3 +67,4 @@ import '../styles/global.css';
   import '../scripts/menu.js';
   import '../scripts/cookieconsent-config.js';
 </script>
+
