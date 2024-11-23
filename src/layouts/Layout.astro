@@ -13,6 +13,7 @@ import { Icon } from 'astro-icon/components'
 <!doctype html>
 <html lang='en'>
   <head>
+
     <meta charset='UTF-8' />
     <meta name='description' content='Personal website of Arttu Nikkilä. Includes portfolio and blog. Super interesting. You should totally visit here!' />
     <meta name='viewport' content='width=device-width' />
@@ -30,7 +31,7 @@ import { Icon } from 'astro-icon/components'
     src="https://www.googletagmanager.com/gtag/js?id=G-6HJEWEKWH9"
 ></script>
 
-<script data-category="analytics" is:inline>
+<script is:inline data-category="analytics">
   console.log("hyväksytty");
     window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -76,6 +77,7 @@ import { Icon } from 'astro-icon/components'
 </script>
   </head>
   <body class='bg-background'>
+
    
     <Navigation />
     <slot class='wrapper bg-background' />
@@ -88,8 +90,7 @@ import { Icon } from 'astro-icon/components'
   >
   <Icon class="text-2xl" name="mdi:cookie-cog-outline" />
   </button>
-
-  <script src="../scripts/cookieconsent-config.js"></script>
+  <script  src="../scripts/cookieconsent-config.js"></script>
 
   </body>
 </html>

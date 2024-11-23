@@ -17,13 +17,18 @@ CookieConsent.run({
       equalWeightButtons: true,
       flipButtons: false,
     },
+    onFirstConsent: function (cookie) {
+      // callback triggered only once on the first accept/reject action
+    },
   },
   categories: {
     necessary: {
+      enabled: true,
       readOnly: true,
     },
     functionality: {},
-    analytics: {},
+    analytics: { enabled: false },
+
     marketing: {},
   },
   language: {
