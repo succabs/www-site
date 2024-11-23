@@ -30,8 +30,9 @@ import { Icon } from 'astro-icon/components'
     src="https://www.googletagmanager.com/gtag/js?id=G-6HJEWEKWH9"
 ></script>
 
-<script data-category="analytics" is:inline>
-  window.dataLayer = window.dataLayer || [];
+<script data-category="analytics">
+  console.log("hyväksytty");
+    window.dataLayer = window.dataLayer || [];
   function gtag() {
       dataLayer.push(arguments);
   }
@@ -45,6 +46,33 @@ import { Icon } from 'astro-icon/components'
   });
 
   gtag("config", "G-6HJEWEKWH9");
+
+
+
+</script>
+
+<script type="text/plain" data-category="analytics">
+  gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+  });
+</script>
+
+<script type="text/plain" data-category="!analytics">
+  gtag('consent', 'update', {
+      'analytics_storage': 'denied'
+  });
+</script>
+
+<script type="text/plain" data-category="marketing">
+  gtag('consent', 'update', {
+      'ad_storage': 'granted'
+  });
+</script>
+
+<script type="text/plain" data-category="!marketing">
+  gtag('consent', 'update', {
+      'ad_storage': 'denied'
+  });
 </script>
   </head>
   <body class='bg-background'>
@@ -60,11 +88,14 @@ import { Icon } from 'astro-icon/components'
   >
   <Icon class="text-2xl" name="mdi:cookie-cog-outline" />
   </button>
+
+  <script src="../scripts/cookieconsent-config.js"></script>
+
   </body>
 </html>
 
 <script>
   import '../scripts/menu.js';
-  import '../scripts/cookieconsent-config.js';
+
 </script>
 
