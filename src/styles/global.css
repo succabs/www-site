@@ -18,6 +18,18 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('/fonts/DancingScript-VariableFont_wght.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-signature {
+  font-family: 'Dancing Script', cursive;
+}
+
 @layer utilities {
   .hamburger-toggle {
     @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;

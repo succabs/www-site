@@ -7,6 +7,9 @@ export interface Props {
 }
 
 const { title, issuer, date, link } = Astro.props;
+
+import { Icon } from 'astro-icon/components'; // Or any other icon library
+
 ---
 
 <div class=" p-6 duration-300 bg-background rounded-lg border border-body overflow-hidden transition-transform hover:scale-105">
@@ -15,14 +18,17 @@ const { title, issuer, date, link } = Astro.props;
   <p class="text-sm text-body mb-4">Issued on {date}</p>
 
   {link ? (
-    <a
-      href={link}
-      class="inline-blocktext-primary py-2 px-4 rounded transition-colors text-body bg-blue-600 hover:bg-blue-800"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      View Certificate
-    </a>
+<a
+  href={link}
+  class="inline-flex items-center space-x-2 text-background py-2 px-4 rounded transition-colors bg-primary hover:bg-blue-800"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span>View Certificate</span>
+  <Icon name="mdi:external-link" class="w-5 h-5" />
+</a>
+
+
   ) : (
     <p class="text-gray-400 italic">No link available</p>
   )}

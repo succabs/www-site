@@ -16,12 +16,23 @@ import BaseLayout from "../../layouts/Layout.astro";
 <BaseLayout title="Arttu Nikkilä - Blog">
   <section class="container mx-auto px-4 wrapper pt-12 pb-8">
     <h1 class="text-3xl font-bold text-center mb-8 text-heading">Blog</h1>
-    <p class="text-body mb-8">From this blog you can find out my thoughts and experiences about variety of things.</p>
+    <p class="text-body mb-8">
+      A warm welcome to my blog — a mix of web development insights, personal stories, and a bit of everything I love. Here, I share do's and don'ts for building better websites, rant about things that drive me crazy in tech, and dive into my favorite sci-fi books, TV series, and even personal topics like living with psoriasis. If you are like me, you may find that there is something to learn in every topic!
+
+    </p>
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
       {
         posts.map((post, index) => (
-          <li class={`${index === 0 ? 'md:col-span-2' : ''} ${post.data.tags.join(" ")}`}>
+          <li class={`${index === 0 ? 'md:col-span-2 relative' : ''} ${post.data.tags.join(" ")}`}>
             <a href={`/blog/${post.slug}/`} class="block transition-transform hover:scale-105">
+              
+              {/* Featured Label */}
+              {index === 0 && (
+                <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-md text-xs uppercase font-bold shadow-md">
+                  Featured
+                </span>
+              )}
+    
               <img 
                 width={720} 
                 height={360} 
@@ -47,5 +58,6 @@ import BaseLayout from "../../layouts/Layout.astro";
         ))
       }
     </ul>
+    
   </section>
 </BaseLayout>

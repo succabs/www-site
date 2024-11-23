@@ -31,3 +31,5 @@ Keywords: Responsive, Informative, Sleek, Dark
 
 - Mobile hamburger menu placement and line heights fixed
 - Blog font color to white & width to 80ch
+- Cookie banner added & configured
+- GA4 added

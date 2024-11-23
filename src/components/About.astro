@@ -4,7 +4,7 @@ import myImage from '../media/me.jpg';
 import { Icon } from 'astro-icon/components';
 ---
 
-<section id="about" class='text-body pt-12 md:pt-36 pb-8'>
+<section id="about" class='text-body mt-12 md:pt-32 pb-8'>
   <div
     class='container mx-auto flex flex-col-reverse md:flex-row items-center px-4'
   >
@@ -35,23 +35,35 @@ import { Icon } from 'astro-icon/components';
 
 
 
-      <h2 class='text-xl text-center md:text-left font-semibold text-heading'>I combine art(tu) with tech.</h2>
+      <h2 class='text-xl text-center md:text-left font-semibold text-heading'>I bring art(tu) to web development.</h2>
       <p class=' text-body text-center md:text-left'>
         In my current role I adapt to a wide range of situations deeply in the <span
           class='italic'>client interface</span
-        >, balancing technical expertise with customer-facing responsibilities in the field of eCommerce.
+        >, balancing technical expertise with customer-facing responsibilities in the field of eCommerce. 
+        I'm passionate about making the web a place that not only looks sleek but also works fast. A great digital experience doesn't just grab your attention — it respects your time.
+
+
       </p>
-      <p class="text-body text-center md:text-left">Outside the computer world I enjoy playing guitar, diving into science fiction, exploring obscure topics, and occasionally, magnet fishing.</p>
-      <p class="text-body text-center md:text-left">This site acts as my personal portfolio, blog and digital playground. Scroll down to find out more about me or jump into the blog to read about my journey with IT, my hobbies and hot takes about various things.</p>
+      <p class="text-body text-center md:text-left">Outside the computer world I enjoy playing guitar, reading books (especially science fiction) and exploring obscure topics. In the summer, you might catch me magnet fishing — a surprisingly fun way to spend a sunny day!</p>
+      <p class="text-body text-center md:text-left">This is my personal portfolio, blog and digital playground. Scroll down to learn more about me, or head over to the blog to dive into my thoughts about web development, my life and occasional hot takes about the world around us.</p>
+      <p class="text-body text-center md:text-left">If you like what you see, you can connect with me on LinkedIn, follow me on GitHub or drop me an email from the buttons below.</p>
 
       <!-- Social Icons -->
       <div class='flex justify-center md:justify-start space-x-6'>
+        <a href='https://linkedin.com/in/arttu-nikkila' target='_blank' aria-label="Visit my LinkedIn" class='text-4xl'
+        ><Icon class='fab fa-2x' name='skill-icons:linkedin' /></a
+      >
         <a href='https://github.com/succabs' target='_blank' aria-label="Visit my GitHub" class='text-4xl'
           ><Icon class='fab fa-2x' name='skill-icons:github-dark' /></a
         >
-        <a href='https://linkedin.com/in/arttu-nikkila' target='_blank' aria-label="Visit my LinkedIn" class='text-4xl'
-          ><Icon class='fab fa-2x' name='skill-icons:linkedin' /></a
+
+        <a href='mailto:artnikkila@gmail.com' aria-label="Send me an email" class='text-4xl'
+          ><Icon class='fab fa-2x' name='material-symbols:mail-sharp' /></a
         >
+
+      </div>
+      <div class=" mt-6">
+        <p class="text-4xl font-signature text-body text-center md:text-left">-Arttu :)</p>
       </div>
     </div>
     <!-- Right Section: Image/Illustration -->
@@ -62,6 +74,6 @@ import { Icon } from 'astro-icon/components';
 </section>
 
 <div
-  class='top-0 left-0 right-0 h-0.5 bg-gradient-to-l from-transparent via-slate-400 to-transparent my-4 md:my-36'
+  class='top-0 left-0 right-0 h-0.5 bg-gradient-to-l from-transparent via-slate-400 to-transparent my-12 md:my-36'
 >
 </div>
