@@ -2,7 +2,8 @@
 
 This is the repository for my portfolio website.
 
-Made with Astro and TailwindCSS.
+Made with Astro and TailwindCSS. Cookie Consent is made with vanilla-cookieconsent npm package. Many things are (and will be) 
+implemented purely for learning purposes.
 
 You can see the live version at [arttu.net](https://arttu.net).
 
@@ -13,19 +14,18 @@ Keywords: Responsive, Informative, Sleek, Dark
 ## Todo
 
 - more room to breathe to front page
-- font change? at least heading font should be serif
-- favicon after font change
 - animated sections ?
 - projects to pop up to full screen dialog
-- spice it up
 - blog to have pages
-- blog sorting from time and filtering with tags
 - nappien kontrastit
 - certtinappi kontrasti
-- aika timeline kontrasti
 - heading järjestys -> valitus blog post osion titlestä
 
 ## Changelog
+
+### 2024.11.24
+
+-Cookie consent is now sent to server
 
 ### 2024.11.23
 

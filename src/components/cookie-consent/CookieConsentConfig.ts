@@ -1,4 +1,4 @@
-import type { CookieConsentConfig } from 'vanilla-cookieconsent';
+import { getCookie, type CookieConsentConfig } from 'vanilla-cookieconsent';
 
 document.documentElement.classList.add('cc--darkmode');
 
@@ -10,6 +10,14 @@ declare global {
 }
 
 export const config: CookieConsentConfig = {
+  onFirstConsent: () => {
+    logConsent();
+},
+onChange: () => {
+    logConsent();
+    console.log(getCookie());
+
+},
   guiOptions: {
     consentModal: {
       layout: 'box inline',
@@ -143,5 +151,34 @@ export const config: CookieConsentConfig = {
         },
       },
     },
-  },
+    
+  },  
 };
+
+function logConsent() {
+  // Ensure CookieConsent is loaded
+  if (getCookie() === undefined) {
+    console.error("CookieConsent is not available.");
+    return;
+  }
+
+  // Retrieve all the fields
+  const cookie = getCookie();
+
+  // Prepare the consent data to send
+  const userConsent = {
+    consentId: cookie.consentId,
+    accepted: cookie.categories,
+    consentTimestamp: cookie.consentTimestamp,
+    lastConsentTimestamp: cookie.lastConsentTimestamp,
+  };
+
+  // Send consent data to your backend
+  fetch("/store-consent", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userConsent),
+  });
+}
