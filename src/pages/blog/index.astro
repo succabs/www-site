@@ -17,10 +17,12 @@ import BaseLayout from "../../layouts/Layout.astro";
 
 <BaseLayout title="Arttu Nikkilä - Blog">
   <section class="container mx-auto px-4 wrapper pt-12 pb-8">
-    <h1 class="text-3xl font-bold text-center mb-8 text-heading">Blog</h1>
+    <h1 class="text-3xl font-bold text-center mb-8 text-heading">Blog Index</h1>
     <p class="text-body mb-8">
-      A warm welcome to my blog — a mix of web development insights, personal stories, and a bit of everything I love. Here, I share do's and don'ts for building better websites, rant about things that drive me crazy in tech, and dive into my favorite sci-fi books, TV series, and even personal topics like living with psoriasis. If you are like me, you may find that there is something to learn in every topic!
-    </p>
+      Here, you'll find a mishmash of web dev wisdom, personal tales, and whatever else I feel like yelling into the void.
+       Expect rants about tech gone wrong as well as deep dives into the sci-fi books, 
+       TV shows and memes that keep me sane. I might even overshare about living with psoriasis or chasing streaks on Duolingo. 
+       It's random. It's real. It's me. Or is it?</p>
 
     {/* Featured Post */}
     <div id="featured-post" class="mb-8">
@@ -49,26 +51,27 @@ import BaseLayout from "../../layouts/Layout.astro";
 
     {/* Sorting and Filters */}
     <div class="mb-8">
-      <h2 class="text-2xl font-bold mb-4">All Posts</h2>
+      <h2 class="text-2xl font-bold mb-4 text-heading">All Posts</h2>
       <div class="flex flex-wrap justify-between items-center mb-4">
         {/* Sorting Dropdown */}
         <div class="relative">
-          <label for="sort" class="block text-sm font-medium text-gray-700">Sort by:</label>
+          <label for="sort" class="block text-sm font-medium text-body">Sort by:</label>
           <select
             id="sort"
-            class="block w-full mt-1 bg-gray-200 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
+            class="block w-full mt-1 bg-background border border-body text-body rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
           >
             <option value="newest">Newest to Oldest</option>
             <option value="oldest">Oldest to Newest</option>
           </select>
         </div>
-
-        {/* Filters Heading */}
-        <h3 class="text-lg font-semibold">Filter by Tags:</h3>
       </div>
+        {/* Filters Heading */}
+        
+      
 
       {/* Filters */}
       <div id="tags" class="flex flex-wrap gap-2">
+        <h3 class="text-lg font-semibold text-heading">Filter by Tags:</h3>
         {['All', ...uniqueTags].map((tag) => (
           <button
             class="px-4 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-300 transition"
@@ -79,6 +82,7 @@ import BaseLayout from "../../layouts/Layout.astro";
         ))}
       </div>
     </div>
+ 
 
     {/* Filterable Posts */}
     <ul id="post-list" class="grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0">
