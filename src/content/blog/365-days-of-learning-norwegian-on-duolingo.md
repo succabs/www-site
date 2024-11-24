@@ -1,63 +1,90 @@
 ---
-title: '365 Days of Learning Norwegian on Duolingo'
-description: 'After a year of dedicated practice on Duolingo, I’ve not only learned some of the basics of Norwegian but also gained insights into the challenges and rewards of long-term language learning. In this post, I share my journey, the ups and downs, and my plans for continuing this linguistic adventure.'
-pubDate: 'Aug 29 2024'
-heroImage: '/blog_images/norway.jpg'
-author: 'Arttu Nikkilä'
-tags: ['learning', 'languages', 'lifestyle']
+title: "365 Days of Learning Norwegian on Duolingo"
+description: "A full year of daily Norwegian on Duolingo: 365 days of streaks, struggles, and shouting numbers at my phone while it refused to understand me. This isn’t just about learning a language; it’s about chasing dreams of fjords, Röyksopp, and maybe even a new life in Norway. Come for the insights, stay for the chaos."
+pubDate: "Aug 29 2024"
+heroImage: "/blog_images/norway.jpg"
+author: "Arttu Nikkilä"
+tags: ["learning"]
 ---
 
-This is the story of an achievement I have quietly done over the year: I finally hit the 365-day streak on Duolingo! Read on to discover what I’ve learned during this time and how this journey has shaped my perspective.
+# **What's Happened?**
 
-## Why Norwegian?
+Here’s something I’ve quietly been grinding away at for a year: I finally hit a 365-day streak on Duolingo! That’s right—a full year of daily Norwegian practice. This post is a look at what I’ve learned, the challenges I’ve faced, and how this journey has shaped my perspective on language learning (and maybe life a little, too).
 
-Norwegian wasn't just a random choice for me—it was a deliberate decision influenced by several factors:
+---
 
-- **A Rich Country**: Norway is one of the wealthiest countries in the world, known for its high standard of living and strong economy.
-- **Great Music**: I’ve always been a fan of Norwegian music, especially metal and electronic artists like Röyksopp.
-- **Cultural Similarities**: As a Finn, I find Norwegians culturally similar to us. It feels like a natural extension of my own culture.
-- **Fantasies of Moving**: Sometimes, I fantasize about moving to Norway, and learning the language seemed like a good first step.
+## **Why Norwegian?**
 
-## The Journey Begins
+This wasn’t some random spin-the-wheel-of-languages decision. Learning Norwegian was a deliberate choice, and here’s why:  
 
-My journey with Norwegian started with a realization: the basics of the language seemed approachable, especially since I had learned Swedish in school. Norwegian and Swedish are quite similar, at least at a foundational level, which gave me a bit of a head start.
+- **A Wealthy, Happy Place**: Norway ranks among the richest countries in the world, and its high standard of living has a strong appeal. Plus, let’s be real—who doesn’t daydream about fjords and hygge?  
+- **The Music Scene**: I’m a huge fan of Norwegian artists, especially Röyksopp and some of their more metal compatriots.  
+- **Cultural Vibes**: As a Finn, I’ve always felt a kinship with Norwegians. There’s something about their humor, values, and general vibe that feels… familiar.  
+- **Future Plans?**: I occasionally fantasize about moving to Norway. Learning the language seemed like the natural first step toward that pipe dream.  
 
-### My Learning Schedule
+---
 
-Consistency was key. I committed to practicing 5-10 minutes daily, usually squeezing in a session before brushing my teeth and going to bed. Additionally, I supplemented my Duolingo exercises with podcasts about learning Norwegian and life in Norway, which provided valuable context and kept me motivated.
+## **The Journey Begins**
 
-### Challenges
+Norwegian wasn’t completely foreign to me when I started—having learned Swedish in school gave me a bit of a head start. As a Finn, it’s mandatory to study both English and Swedish, and I even dabbled in German for a couple of years. Norwegian, being so similar to Swedish, felt approachable and logical to tackle.
 
-Reaching 365 days wasn’t without its hurdles:
+### **Daily Practice Ritual**  
 
-- **Maintaining the Streak**: There were days when I struggled to find the time to continue my streak, but fortunately, Duolingo offers streak freezes, which were a lifesaver on more than one occasion.
-- **The Numbers - THE NUMBERS!!**: One of the most frustrating aspects was Duolingo's difficulty with spoken numbers. It simply can't understand numbers in speaking exercises. That made exercises involving numbers often felt cumbersome and less effective.
-- **Temptation to Switch**: At times, I considered switching to another language, but I decided to stick with Norwegian, knowing that persistence is key in language learning.
+Consistency was the secret sauce. I dedicated 5–10 minutes a day, often squeezing in a lesson right before brushing my teeth. Over time, I also added podcasts about Norwegian culture and life, which kept me inspired and helped connect language to context.
 
-### Progress and Achievements
+---
 
-Despite the challenges, there were several highlights along the way:
+## **Challenges on the Road to 365**
 
-- **Streak Satisfaction**: Watching my streak grow day by day was incredibly satisfying and kept me coming back for more.
-- **Gamification**: I enjoyed the gamified elements of Duolingo, which made the learning process fun and engaging.
-- **30,000 XP Milestone**: I’ve accumulated around 30,000 XP in the Norwegian course—a testament to my dedication.
-- **Monthly Badges**: I’ve earned all the monthly badges, completing 50 daily quests each month to achieve this.
+No streak is without its bumps, and mine was no exception.  
 
-## What Have I Learned?
+### **1. The Streak Struggle**  
+Life happens. There were days when squeezing in a lesson felt impossible, but streak freezes on Duolingo saved me from losing my progress on multiple occasions. They’re both a blessing and a crutch.  
 
-After 365 days, I’ve gained a decent understanding of the basics:
+### **2. Numbers, Numbers Everywhere**  
+One major gripe? Duolingo’s voice recognition system *hates* numbers. Speaking exercises involving numbers became an exercise in frustration. I’d pronounce them correctly (or so I thought), and the app would respond like I’d just made up a word.  
 
-- **Foundational Vocabulary**: I can confidently use traveling words, discuss life and family, and engage in basic conversations.
-- **Media Comprehension**: I’ve started to pick up on words and phrases while watching Norwegian shows, which feels like a small but significant victory.
+### **3. The Grass Is Always Greener**  
+There were moments when I was tempted to abandon Norwegian and start a shiny new language. But sticking with it has been a lesson in discipline—and a reminder that hopping languages is the quickest path to learning… nothing.
 
-However, Duolingo alone only covers the basics. To gain a deeper understanding, better vocabulary and fluency, it’s essential to supplement with additional learning methods, such as consuming Norwegian media (series, movies, news) and engaging in real-life conversations.
+---
 
-### Key Takeaways
+## **Progress and Achievements**  
 
-Language learning is a marathon, not a sprint. While I’ve only scratched the surface of Norwegian, the journey has taught me patience, consistency, and the importance of setting small, achievable goals.
+Despite the hurdles, I’ve got some victories worth celebrating:  
 
-## Looking Ahead
+- **That Streak, Though**: Watching my streak grow from days to weeks to months was immensely satisfying. Gamification works, people.  
+- **Leveling Up**: I’ve racked up over 30,000 XP in Norwegian—a testament to showing up daily, even when it felt like a chore.  
+- **All the Badges**: Duolingo’s monthly quests became a mini-obsession. Completing 50 daily challenges each month was a grind, but I nailed it.  
+- **Media Wins**: I’ve started picking out familiar words and phrases in Norwegian shows, which feels like unlocking a secret cheat code.
 
-My journey with Norwegian is far from over. I plan to continue my daily practice and hope to visit Norway in the coming years. There’s nothing quite like testing your language skills in real-life situations, and I look forward to that challenge.
+---
 
-This is actually a post I wrote over a month ago but publishing now - my current streak is 404. No, not the "not found" error message - streak is still going strong with 404 days :)
+## **What Did I Actually Learn?**  
+
+A year later, I’ve built a solid foundation in Norwegian:  
+
+- **Basic Vocabulary**: I can navigate travel scenarios, discuss family, and hold simple conversations without sounding like a complete idiot.  
+- **Media Skills**: Picking up phrases in Norwegian TV shows and music has been one of the most rewarding aspects of the journey.  
+
+But let’s be real—Duolingo alone won’t make you fluent. To go deeper, I’ll need to dive into more immersive methods like watching movies, reading books, and (gulp) speaking with actual Norwegians.  
+
+---
+
+## **What’s Next?**
+
+This isn’t the end of my Norwegian journey. I’m still on track, with my streak currently standing at a very satisfying 404 days (Not a “Not Found” error—this streak is alive and kicking!). In case you didn't realize it from the last sentence, the title of the post is a lie. I meant to write this after 365 days but here we are. 404 seems like a proper number for a developer, anyway.
+
+My next goals:  
+
+1. **More Immersion**: Watching more Norwegian TV and reading simple books to expand vocabulary.  
+2. **Real Conversations**: Tackling the scary-but-rewarding task of talking to actual Norwegians.  
+3. **A Trip to Norway**: Testing my skills in the wild is the ultimate challenge—and hopefully, a not-too-distant reality.
+
+---
+
+## **Final Thoughts**
+
+Learning a language is like climbing a mountain—it’s slow, sometimes painful, and full of moments where you wonder why you even started. But every step is worth it. This 365-day journey has taught me more than just Norwegian. It’s reminded me of the value of patience, persistence, and celebrating small wins along the way.  
+
+So here’s to the next 365 (404) days—and hopefully, a conversation with a Norwegian that doesn’t involve me asking them to speak slower.  

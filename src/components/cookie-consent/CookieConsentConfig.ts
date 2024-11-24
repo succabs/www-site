@@ -53,9 +53,6 @@ export const config: CookieConsentConfig = {
             },
           ],
         },
-        another: {
-          label: 'Another one (dummy)',
-        },
       },
     },
   },
@@ -67,12 +64,13 @@ export const config: CookieConsentConfig = {
         consentModal: {
           title: "Hello traveller, it's cookie time!",
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
-          acceptAllBtn: 'Accept all',
+          'We use cookies to enhance your browsing experience and to analyze our traffic. By clicking the "Accept all" button, you consent to our use of cookies.', 
+         acceptAllBtn: 'Accept all',
           acceptNecessaryBtn: 'Reject all',
           showPreferencesBtn: 'Manage preferences',
           footer:
             '<a href="#link">Privacy Policy</a>\n<a href="#link">Terms and conditions</a>',
+            
         },
         preferencesModal: {
           title: 'Consent Preferences Center',
@@ -85,31 +83,61 @@ export const config: CookieConsentConfig = {
             {
               title: 'Cookie Usage',
               description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              'We use cookies to enhance your browsing experience and to analyze our traffic. You can change your preferences here.', 
             },
             {
               title:
                 'Strictly Necessary Cookies <span class="pm__badge">Always Enabled</span>',
               description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              'These cookies are strictly necessary for the website to function properly. They do not store any personally identifiable information.',
               linkedCategory: 'necessary',
+              cookieTable: {
+                caption: 'Cookie table',
+                headers: {
+                    name: 'Cookie',
+                    domain: 'Domain',
+                    desc: 'Description'
+                },
+                body: [
+                    {
+                        name: 'cc_cookie',
+                        domain: location.hostname,
+                        desc: 'to store consent status',
+                    },
+                ]
+            }
             },
             {
               title: 'Functionality Cookies',
               description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              'No functional cookies in use yet :)',
               linkedCategory: 'functionality',
             },
             {
               title: 'Analytics Cookies',
               description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              'These cookies help us to improve our website by collecting and reporting information on how you use it. Link to Google Analytics Privacy Policy: <a href="https://business.safety.google/privacy/" target="_blank"><b>Google Policy</b></a>',
               linkedCategory: 'analytics',
+              cookieTable: {
+                caption: 'Cookie table',
+                headers: {
+                    name: 'Cookie',
+                    domain: 'Domain',
+                    desc: 'Description'
+                },
+                body: [
+                    {
+                        name: '_ga*',
+                        domain: location.hostname,
+                        desc: 'to store and count pageviews',
+                    },
+                ]
+            }
             },
             {
               title: 'More information',
               description:
-                'For any query in relation to my policy on cookies and your choices, please <a class="cc__link" href="#yourdomain.com">contact me</a>.',
+                'For any query in relation to our policy on cookies and your choices, please <a class="cc__link" href="#contact">contact us</a>.',
             },
           ],
         },

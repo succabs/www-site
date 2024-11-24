@@ -1,26 +1,37 @@
-<footer class='py-12 relative wrapper bg-background'>
+<footer class="py-12 relative wrapper bg-background">
   <!-- Fading Top Border (Fades toward the corners) -->
   <div
-    class='top-0 left-0 right-0 h-0.5 bg-gradient-to-l from-transparent via-slate-400 to-transparent'
+    class="top-0 left-0 right-0 h-0.5 bg-gradient-to-l from-transparent via-slate-400 to-transparent"
   >
   </div>
 
-  <div class='container mx-auto px-4 py-8'>
+  <div class="container mx-auto px-4 py-8">
     <!-- Text Information -->
-    <div class='text-heading text-center mb-4 text-sm'>
+    <div class="text-heading text-center mb-4 text-sm">
       This site is made with Astro and TailwindCSS. Deployed with GitHub Actions
       to Hetzner VPS running Ubuntu server. The source code is available on a <a
-        href='https://github.com/succabs/www-site'
-        class='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>Github repository</a
-      >.
+        href="https://github.com/succabs/www-site"
+        class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">GitHub repository</a>.
+    </div>
+
+    <!-- GDPR Links -->
+    <div class="text-heading text-center mb-4 text-sm">
+      <a
+        href="/privacy-policy"
+        class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+      >Privacy Policy</a> |
+      <a
+        href="/cookie-policy"
+        class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+      >Cookie Policy</a>
     </div>
 
     <!-- Copyright and Email -->
-    <div class='text-center text-heading'>
+    <div id="contact" class="text-center text-heading">
       © 2024 Arttu Nikkilä - <a
-        href='mailto:artnikkila@gmail.com'
-        class='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>artnikkila@gmail.com</a
-      >
+        href="mailto:artnikkila@gmail.com"
+        class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">artnikkila@gmail.com</a>
     </div>
-  </div>
+
 </footer>
+
