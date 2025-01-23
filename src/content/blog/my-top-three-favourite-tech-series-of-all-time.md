@@ -2,7 +2,7 @@
 title: 'My Top Three Favorite Tech Series'
 description: "An exploration of three standout tech series that offer drama, humor, and psychological intrigue. From the pioneering spirit of 'Halt and Catch Fire' to the satirical brilliance of 'Silicon Valley' and the gripping suspense of 'Mr. Robot,' these shows provide a multifaceted view of the tech world."
 pubDate: 'Jan 23 2025'
-heroImage: '/blog_images/tech_series.jpg'
+heroImage: '/blog_images/tech_series.jpeg'
 author: 'Arttu Nikkilä'
 tags: ['pop culture']
 ---
